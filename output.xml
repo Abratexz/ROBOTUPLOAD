@@ -9428,3 +9428,3689 @@ Leave Type")] element.</msg>
 <status status="PASS" start="2025-04-29T12:00:09.725583" elapsed="0.004003"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:00:10.239176" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:09.730587" elapsed="0.508589"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:00:09.725583" elapsed="0.513593"/>
+</iter>
+<var>${i}</var>
+<value>${times}</value>
+<status status="PASS" start="2025-04-29T12:00:08.695638" elapsed="1.543538"/>
+</for>
+<arg>3</arg>
+<status status="PASS" start="2025-04-29T12:00:08.694637" elapsed="1.544539"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:00:10.240178" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "Kanokkorn Yoosuk")]'.</msg>
+<arg>xpath=//*[contains(@aria-label, "Kanokkorn Yoosuk")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:00:10.239176" elapsed="0.058054"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:00:20.305018" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:10.298231" elapsed="10.006787"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:10.298231" elapsed="10.006787"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:00:20.306019" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:00:20.306019" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:00:20.306019" elapsed="0.266220"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:00:21.084237" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:20.573241" elapsed="0.510996"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:00:21.084237" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.084237" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.084237" elapsed="0.001003"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.085240" elapsed="0.011009"/>
+</kw>
+<msg time="2025-04-29T12:00:21.096249" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.085240" elapsed="0.011009"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:00:21.103256" level="INFO">Element 'xpath=//*[contains(@aria-label, "confirm")]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.096249" elapsed="0.007007"/>
+</kw>
+<msg time="2025-04-29T12:00:21.103256" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.096249" elapsed="0.007007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.103256" elapsed="0.001001"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.103256" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:00:21.104257" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.104257" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.104257" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:20.306019" elapsed="0.798238"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:00:20.306019" elapsed="0.798238"/>
+</while>
+<arg>${confirm_button}</arg>
+<status status="PASS" start="2025-04-29T12:00:20.305018" elapsed="0.799239"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:00:31.113880" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:21.105257" elapsed="10.008623"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:21.105257" elapsed="10.008623"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:00:31.113880" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "confirm")]'.</msg>
+<arg>${confirm_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:00:31.113880" elapsed="0.066059"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:00:41.190079" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:31.179939" elapsed="10.010140"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:31.179939" elapsed="10.010140"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:00:41.191080" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "close_button")]'.</msg>
+<arg>${close_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:00:41.190079" elapsed="0.044040"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:00:51.248609" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:41.235120" elapsed="10.013489"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:41.234119" elapsed="10.014490"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-29T12:00:51.248609" elapsed="2.137750"/>
+</kw>
+<status status="PASS" start="2025-04-29T11:57:54.574842" elapsed="178.811517"/>
+</test>
+<test id="s1-t11" name="Leave Config 2 Approver Level" line="342">
+<kw name="Open Browser Madii" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:00:53.388361" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.madie.ai/LoginWeb'.</msg>
+<arg>${URL}</arg>
+<arg>${CHROME_BROWSER_HEADLESS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-29T12:00:53.387360" elapsed="1.653500"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-04-29T12:00:55.040860" elapsed="0.021020"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-29T12:00:55.061880" elapsed="0.016014"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:53.387360" elapsed="1.690534"/>
+</kw>
+<kw name="Login User 1" owner="action_keyword">
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:05.091397" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:00:55.078895" elapsed="10.012502"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:55.078895" elapsed="10.012502"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:01:05.091397" elapsed="0.015013"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${login_email_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:01:05.106410" elapsed="0.014013"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:01:05.121423" level="INFO">Sending key(s) ('parrybear83@gmail.com',) to xpath=//*[contains(@aria-label, "field_enter_email")] element.</msg>
+<msg time="2025-04-29T12:01:05.410321" level="INFO">Sending keys parrybear83@gmail.com</msg>
+<arg>${login_email_field}</arg>
+<arg>${data_email}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:01:05.121423" elapsed="0.513101"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:10.647354" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:05.634524" elapsed="5.012830"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_pass_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:01:10.647354" elapsed="0.013012"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:01:10.660366" level="INFO">Sending key(s) ('12345',) to xpath=//*[contains(@aria-label, "field_enter_password")] element.</msg>
+<msg time="2025-04-29T12:01:10.939255" level="INFO">Sending keys 12345</msg>
+<arg>${login_pass_field}</arg>
+<arg>${data_password}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:01:10.660366" elapsed="0.344949"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:16.006553" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:11.005315" elapsed="5.001238"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:01:16.006553" elapsed="0.010009"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:01:16.017563" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[@aria-label="Log in"] element.</msg>
+<msg time="2025-04-29T12:01:16.354648" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:01:16.354648" level="INFO">Releasing special key ENTER.</msg>
+<arg>${login_button}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:01:16.017563" elapsed="0.353100"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:26.372409" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:16.371664" elapsed="10.000745"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:01:16.370663" elapsed="10.001746"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:55.077894" elapsed="31.294515"/>
+</kw>
+<kw name="Settings Go to Leave Type" owner="action_keyword">
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:36.380120" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:26.373411" elapsed="10.006709"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:01:26.373411" elapsed="10.006709"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${settings_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:01:36.380120" elapsed="0.010010"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:01:36.391131" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[contains(@aria-label, "main_menu_Settings
+Setting")] element.</msg>
+<msg time="2025-04-29T12:01:36.691236" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:01:36.691236" level="INFO">Releasing special key ENTER.</msg>
+<arg>${settings_menu}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:01:36.390130" elapsed="0.306110"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:46.704905" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:36.696240" elapsed="10.008665"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:01:36.696240" elapsed="10.008665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${leave_type_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:01:46.704905" elapsed="0.010010"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:01:46.714915" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[contains(@aria-label, "sub_menu_Settings
+Leave Type")] element.</msg>
+<msg time="2025-04-29T12:01:46.976370" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:01:46.976370" level="INFO">Releasing special key ENTER.</msg>
+<arg>${leave_type_menu}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:01:46.714915" elapsed="0.569074"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:01:57.299547" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:47.283989" elapsed="10.015558"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:01:47.283989" elapsed="10.015558"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:01:26.372409" elapsed="30.927138"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:01:57.300548" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "add_leave_config")]'.</msg>
+<arg>${add_leave_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:01:57.299547" elapsed="0.067061"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:07.379100" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:01:57.367609" elapsed="10.011491"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:01:57.367609" elapsed="10.011491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${leave_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:07.379100" elapsed="0.013012"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:07.392112" level="INFO">Sending key(s) ('การลาเข้ารับการตรวจคัดเลือก 1 Approve_20250429113225',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:02:07.678539" level="INFO">Sending keys การลาเข้ารับการตรวจคัดเลือก 1 Approve_20250429113225</msg>
+<arg>${leave_field}</arg>
+<arg>การลาเข้ารับการตรวจคัดเลือก 1 Approve_${now}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:07.392112" elapsed="0.888054"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:18.285931" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:08.281167" elapsed="10.004764"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:08.281167" elapsed="10.004764"/>
+</kw>
+<kw name="Clear Input Field With Backspace" owner="action_keyword">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:02:18.286932" elapsed="0.009008"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:02:18.295940" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:02:18.295940" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:02:18.296941" elapsed="0.269272"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:19.079421" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:18.567214" elapsed="0.512207"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:02:19.079421" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.079421" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.079421" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.080422" elapsed="0.013012"/>
+</kw>
+<msg time="2025-04-29T12:02:19.093434" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.080422" elapsed="0.013012"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:19.113451" level="INFO">Element 'xpath=//*[contains(@aria-label, "text_field_max_days")]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.094435" elapsed="0.019016"/>
+</kw>
+<msg time="2025-04-29T12:02:19.114452" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.094435" elapsed="0.020017"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.114452" elapsed="0.001002"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.114452" elapsed="0.001002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:02:19.115454" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.115454" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.115454" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:18.295940" elapsed="0.819514"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:02:18.295940" elapsed="0.819514"/>
+</while>
+<arg>${locator}</arg>
+<status status="PASS" start="2025-04-29T12:02:18.295940" elapsed="0.819514"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.116454" elapsed="0.007007"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:19.124462" level="INFO">Sending key(s) ('CTRL+A',) to xpath=//*[contains(@aria-label, "text_field_max_days")] element.</msg>
+<msg time="2025-04-29T12:02:19.404517" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-29T12:02:19.405518" level="INFO">Sending key A</msg>
+<msg time="2025-04-29T12:02:19.405518" level="INFO">Releasing special key CONTROL.</msg>
+<arg>${locator}</arg>
+<arg>CTRL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.123461" elapsed="0.289064"/>
+</kw>
+<arg>${maxday_allowed_field}</arg>
+<status status="PASS" start="2025-04-29T12:02:18.285931" elapsed="1.126594"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:19.413526" level="INFO">Sending key(s) ('10',) to xpath=//*[contains(@aria-label, "text_field_max_days")] element.</msg>
+<msg time="2025-04-29T12:02:19.702465" level="INFO">Sending keys 10</msg>
+<arg>${maxday_allowed_field}</arg>
+<arg>10</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.412525" elapsed="0.307956"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:29.735421" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:19.720481" elapsed="10.014940"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:19.720481" elapsed="10.014940"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:02:29.736422" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:02:29.736422" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:02:29.736422" elapsed="0.264352"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:30.513103" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.001775" elapsed="0.511328"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:02:30.513103" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.513103" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.513103" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.514104" elapsed="0.012011"/>
+</kw>
+<msg time="2025-04-29T12:02:30.526115" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.514104" elapsed="0.012011"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:30.533121" level="INFO">Element 'xpath=//*[@aria-label="text_field_leave_description"]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.526115" elapsed="0.007006"/>
+</kw>
+<msg time="2025-04-29T12:02:30.533121" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.526115" elapsed="0.007006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.534123" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.533121" elapsed="0.001002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:02:30.534123" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.534123" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.534123" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:29.736422" elapsed="0.797701"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:02:29.736422" elapsed="0.797701"/>
+</while>
+<arg>${leave_description_field}</arg>
+<status status="PASS" start="2025-04-29T12:02:29.735421" elapsed="0.798702"/>
+</kw>
+<kw name="Clear Input Field With Backspace" owner="action_keyword">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.535123" elapsed="0.005005"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:02:30.541129" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.541129" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.541129" elapsed="0.269900"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:31.322895" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:30.812030" elapsed="0.510865"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:02:31.322895" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.322895" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.322895" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.323896" elapsed="0.010009"/>
+</kw>
+<msg time="2025-04-29T12:02:31.334906" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.323896" elapsed="0.011010"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:31.341912" level="INFO">Element 'xpath=//*[@aria-label="text_field_leave_description"]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.334906" elapsed="0.007006"/>
+</kw>
+<msg time="2025-04-29T12:02:31.341912" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.334906" elapsed="0.007006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.342913" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.341912" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:02:31.342913" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.342913" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.342913" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:30.541129" elapsed="0.802785"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:02:30.541129" elapsed="0.802785"/>
+</while>
+<arg>${locator}</arg>
+<status status="PASS" start="2025-04-29T12:02:30.541129" elapsed="0.802785"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.343914" elapsed="0.007006"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:31.350920" level="INFO">Sending key(s) ('CTRL+A',) to xpath=//*[@aria-label="text_field_leave_description"] element.</msg>
+<msg time="2025-04-29T12:02:31.659336" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-29T12:02:31.659336" level="INFO">Sending key A</msg>
+<msg time="2025-04-29T12:02:31.659336" level="INFO">Releasing special key CONTROL.</msg>
+<arg>${locator}</arg>
+<arg>CTRL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.350920" elapsed="0.358460"/>
+</kw>
+<arg>${leave_description_field}</arg>
+<status status="PASS" start="2025-04-29T12:02:30.535123" elapsed="1.174257"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:31.710381" level="INFO">Sending key(s) ('เตรียมเอกสารการลาเข้ารับการตรวจคัดเลือก',) to xpath=//*[@aria-label="text_field_leave_description"] element.</msg>
+<msg time="2025-04-29T12:02:32.045271" level="INFO">Sending keys เตรียมเอกสารการลาเข้ารับการตรวจคัดเลือก</msg>
+<arg>${leave_description_field}</arg>
+<arg>เตรียมเอกสารการลาเข้ารับการตรวจคัดเลือก</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:31.709380" elapsed="0.716236"/>
+</kw>
+<kw name="TAB" owner="action_keyword">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:32.426617" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg time="2025-04-29T12:02:32.427617" level="INFO">Pressing special key TAB to browser.</msg>
+<msg time="2025-04-29T12:02:32.427617" level="INFO">Releasing special key TAB.</msg>
+<arg>NONE</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:32.426617" elapsed="0.022020"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:32.426617" elapsed="0.023021"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:42.449834" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:32.449638" elapsed="10.000196"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:32.449638" elapsed="10.000196"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:02:42.450835" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:02:42.450835" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:02:42.450835" elapsed="0.263356"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:43.226828" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:42.714191" elapsed="0.512637"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:02:43.226828" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.226828" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.226828" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.227829" elapsed="0.011011"/>
+</kw>
+<msg time="2025-04-29T12:02:43.238840" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.227829" elapsed="0.011011"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:43.245846" level="INFO">Element 'xpath=//*[contains(@aria-label, "leave_request_select_approve")][1]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.238840" elapsed="0.008007"/>
+</kw>
+<msg time="2025-04-29T12:02:43.246847" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.238840" elapsed="0.008007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.246847" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.246847" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:02:43.247848" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.247848" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.246847" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:42.450835" elapsed="0.797013"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:02:42.450835" elapsed="0.797013"/>
+</while>
+<arg>${select_approver}</arg>
+<status status="PASS" start="2025-04-29T12:02:42.449834" elapsed="0.798014"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:53.263879" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:43.248849" elapsed="10.015030"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:02:43.247848" elapsed="10.016031"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:53.263879" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "leave_request_select_approve")][1]'.</msg>
+<arg>${select_approver}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:02:53.263879" elapsed="0.119108"/>
+</kw>
+<kw name="Scroll to load element in dropdown" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:53.384988" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:02:53.384988" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:02:53.384988" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:53.384988" elapsed="0.033031"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:54.427116" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:53.419019" elapsed="1.008097"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:02:53.384988" elapsed="1.042128"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:54.428117" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:02:54.428117" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:02:54.428117" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:54.427116" elapsed="0.005005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:55.445260" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:54.432121" elapsed="1.013139"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:02:54.427116" elapsed="1.018144"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:55.445260" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:02:55.446261" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:02:55.446261" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:55.445260" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:56.453236" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:55.449264" elapsed="1.003972"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:02:55.445260" elapsed="1.007976"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:56.453236" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:02:56.453236" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:02:56.454237" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:56.453236" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:57.463818" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:56.457240" elapsed="1.006578"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:02:56.453236" elapsed="1.010582"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:57.463818" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:02:57.463818" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:02:57.464820" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:57.463818" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:58.477245" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:57.467822" elapsed="1.009423"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:02:57.463818" elapsed="1.013427"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:58.478247" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:02:58.478247" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:02:58.478247" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:58.477245" elapsed="0.004003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:02:59.490481" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:58.482249" elapsed="1.008232"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:02:58.477245" elapsed="1.013236"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:02:53.384988" elapsed="6.105493"/>
+</for>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:02:59.491483" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:02:59.491483" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:02:59.491483" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:02:59.490481" elapsed="0.009009"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:00.500568" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:02:59.499490" elapsed="1.001078"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:02:59.490481" elapsed="1.010087"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:00.500568" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:00.501570" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:00.501570" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:00.500568" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:01.514923" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:00.505574" elapsed="1.009349"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:03:00.500568" elapsed="1.014355"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:01.515923" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:01.515923" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:01.515923" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:01.514923" elapsed="0.005004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:02.525051" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:01.519927" elapsed="1.005124"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:03:01.514923" elapsed="1.010128"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:02.525051" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:02.526052" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:02.526052" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:02.525051" elapsed="0.005005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:03.540435" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:02.530056" elapsed="1.010379"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:03:02.525051" elapsed="1.015384"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:03.541435" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:03.541435" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:03.541435" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:03.540435" elapsed="0.006005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:04.546575" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:03.546440" elapsed="1.000135"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:03:03.540435" elapsed="1.006140"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:04.546575" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:04.547577" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:04.547577" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:04.546575" elapsed="0.004005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:05.565243" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:04.550580" elapsed="1.014663"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:03:04.546575" elapsed="1.018668"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:02:59.490481" elapsed="6.074762"/>
+</for>
+<var name="${cycle}">0</var>
+<status status="PASS" start="2025-04-29T12:02:53.383987" elapsed="12.181256"/>
+</iter>
+<var>${cycle}</var>
+<value>1</value>
+<status status="PASS" start="2025-04-29T12:02:53.383987" elapsed="12.181256"/>
+</for>
+<status status="PASS" start="2025-04-29T12:02:53.383987" elapsed="12.181256"/>
+</kw>
+<kw name="PAGE DOWN" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:05.566245" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:05.566245" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:05.566245" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:05.566245" elapsed="0.011009"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.084228" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:05.577254" elapsed="0.506974"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:03:05.566245" elapsed="0.517983"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.085220" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:06.085220" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:06.085220" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.084228" elapsed="0.003994"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.595198" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.088222" elapsed="0.506976"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:03:06.084228" elapsed="0.510970"/>
+</iter>
+<var>${i}</var>
+<value>${times}</value>
+<status status="PASS" start="2025-04-29T12:03:05.566245" elapsed="1.028953"/>
+</for>
+<arg>2</arg>
+<status status="PASS" start="2025-04-29T12:03:05.565243" elapsed="1.029955"/>
+</kw>
+<kw name="Print All Aria Labels" owner="action_keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.603205" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.39")&gt;, &lt;selenium.webdriv...</msg>
+<var>${elements}</var>
+<arg>xpath=//*[@aria-label]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.596199" elapsed="0.007006"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.608210" level="INFO">${label} = Popup menu</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.603205" elapsed="0.005005"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.609211" level="INFO">Popup menu</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.609211" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.39")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.603205" elapsed="0.006006"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.613214" level="INFO">${label} = แพรพิไล หงษ์สกุลพันธ์</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.609211" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.613214" level="INFO">แพรพิไล หงษ์สกุลพันธ์</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.613214" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.40")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.609211" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.617218" level="INFO">${label} = Nattarat Wilairat</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.613214" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.617218" level="INFO">Nattarat Wilairat</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.617218" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.41")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.613214" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.620221" level="INFO">${label} = อิทธิพัทธ์ ทองชัยภูมิ</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.617218" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.621222" level="INFO">อิทธิพัทธ์ ทองชัยภูมิ</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.621222" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.42")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.617218" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.624225" level="INFO">${label} = Sasikarn Roddee</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.621222" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.625225" level="INFO">Sasikarn Roddee</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.624225" elapsed="0.001000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.43")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.621222" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.628228" level="INFO">${label} = สมศรี มีชัย</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.625225" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.628228" level="INFO">สมศรี มีชัย</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.628228" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.44")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.625225" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.632232" level="INFO">${label} = Passorn Pliwsrikaew</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.629229" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.632232" level="INFO">Passorn Pliwsrikaew</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.632232" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.45")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.629229" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.636235" level="INFO">${label} = Kanokkorn Yoosuk</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.633233" elapsed="0.003002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.636235" level="INFO">Kanokkorn Yoosuk</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.636235" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.46")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.633233" elapsed="0.003002"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.640239" level="INFO">${label} = Kanjanee Paorod</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.637236" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.640239" level="INFO">Kanjanee Paorod</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.640239" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.47")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.636235" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.644243" level="INFO">${label} = Chutimon Anansapcharoen</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.640239" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.644243" level="INFO">Chutimon Anansapcharoen</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.644243" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.48")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.640239" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.648246" level="INFO">${label} = yumyum Yoosuk</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.644243" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.648246" level="INFO">yumyum Yoosuk</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.648246" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.38")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.644243" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.652250" level="INFO">${label} = ภูวดี นิมิตวานิชกร</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.648246" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.652250" level="INFO">ภูวดี นิมิตวานิชกร</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.652250" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.49")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.648246" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.656253" level="INFO">${label} = ฟหหหหก ฟหกฟห</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.652250" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:06.656253" level="INFO">ฟหหหหก ฟหกฟห</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.656253" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.50")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:06.652250" elapsed="0.004003"/>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2025-04-29T12:03:06.603205" elapsed="0.053048"/>
+</for>
+<status status="PASS" start="2025-04-29T12:03:06.596199" elapsed="0.060054"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:06.657254" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "Kanokkorn Yoosuk")]'.</msg>
+<arg>xpath=//*[contains(@aria-label, "Kanokkorn Yoosuk")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.657254" elapsed="0.060055"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:16.725253" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:06.718310" elapsed="10.006943"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:03:06.718310" elapsed="10.006943"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:16.726254" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "add_approver_button")]'.</msg>
+<arg>${add_approver}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:16.725253" elapsed="0.066060"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:16.792314" level="INFO">Clicking element 'xpath=(//*[contains(@aria-label, "leave_request_select_approve")])[2]'.</msg>
+<arg>${select_approver_2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:16.791313" elapsed="0.074067"/>
+</kw>
+<kw name="Scroll to load element in dropdown" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:16.867382" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:16.867382" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:16.867382" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:16.866381" elapsed="0.067061"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:17.934754" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:16.933442" elapsed="1.001312"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:03:16.866381" elapsed="1.068373"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:17.934754" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:17.935755" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:17.935755" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:17.934754" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:18.950465" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:17.938758" elapsed="1.011707"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:03:17.934754" elapsed="1.015711"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:18.951467" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:18.951467" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:18.951467" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:18.950465" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:19.962613" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:18.954469" elapsed="1.008144"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:03:18.950465" elapsed="1.012148"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:19.962613" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:19.963615" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:19.963615" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:19.962613" elapsed="0.005005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:20.978241" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:19.967618" elapsed="1.010623"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:03:19.962613" elapsed="1.015628"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:20.978241" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:20.979242" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:20.979242" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:20.978241" elapsed="0.004003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:21.993241" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:20.983245" elapsed="1.009996"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:03:20.978241" elapsed="1.015000"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:21.993241" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:03:21.994242" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:03:21.994242" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:21.993241" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:23.007437" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:21.997245" elapsed="1.010192"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:03:21.993241" elapsed="1.014196"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:03:16.866381" elapsed="6.141056"/>
+</for>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:23.008439" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:23.008439" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:23.008439" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:23.007437" elapsed="0.014013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:24.024242" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:23.022451" elapsed="1.001791"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:03:23.007437" elapsed="1.016805"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:24.025243" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:24.025243" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:24.025243" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:24.024242" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:25.036243" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:24.029246" elapsed="1.006997"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:03:24.024242" elapsed="1.012001"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:25.036243" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:25.037245" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:25.037245" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:25.036243" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:26.048966" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:25.040247" elapsed="1.008719"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:03:25.036243" elapsed="1.012723"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:26.049968" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:26.049968" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:26.049968" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:26.048966" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:27.065178" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:26.052970" elapsed="1.012208"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:03:26.048966" elapsed="1.016212"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:27.065178" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:27.065178" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:27.066179" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:27.065178" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:28.082183" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:27.070183" elapsed="1.012000"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:03:27.065178" elapsed="1.017005"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:28.082183" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:03:28.083184" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:03:28.083184" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:03:28.082183" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.096176" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:28.086187" elapsed="1.009989"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:03:28.082183" elapsed="1.013993"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:03:23.007437" elapsed="6.088739"/>
+</for>
+<var name="${cycle}">0</var>
+<status status="PASS" start="2025-04-29T12:03:16.866381" elapsed="12.229795"/>
+</iter>
+<var>${cycle}</var>
+<value>1</value>
+<status status="PASS" start="2025-04-29T12:03:16.866381" elapsed="12.229795"/>
+</for>
+<status status="PASS" start="2025-04-29T12:03:16.866381" elapsed="12.229795"/>
+</kw>
+<kw name="Print All Aria Labels" owner="action_keyword">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.101181" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.63")&gt;, &lt;selenium.webdriv...</msg>
+<var>${elements}</var>
+<arg>xpath=//*[@aria-label]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.097177" elapsed="0.005005"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.106185" level="INFO">${label} = Popup menu</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.102182" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.106185" level="INFO">Popup menu</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.106185" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.63")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.102182" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.110189" level="INFO">${label} = Dararat Preedaangkarakul</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.107186" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.110189" level="INFO">Dararat Preedaangkarakul</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.110189" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.64")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.107186" elapsed="0.003003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.114193" level="INFO">${label} = Sittikorn Asavathavornvanic</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.111190" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.114193" level="INFO">Sittikorn Asavathavornvanic</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.114193" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.65")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.110189" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.118196" level="INFO">${label} = Tinnapob Pradubwongvarot</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.115193" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.118196" level="INFO">Tinnapob Pradubwongvarot</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.118196" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.66")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.115193" elapsed="0.003003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.122200" level="INFO">${label} = Oat Auttaporn</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.119197" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.122200" level="INFO">Oat Auttaporn</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.122200" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.67")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.118196" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.126203" level="INFO">${label} = Nannapin Pongpiroj</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.122200" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.126203" level="INFO">Nannapin Pongpiroj</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.126203" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.68")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.122200" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.130207" level="INFO">${label} = Kansita Laisri</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.126203" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.130207" level="INFO">Kansita Laisri</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.130207" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.69")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.126203" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.134211" level="INFO">${label} = test add</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.131208" elapsed="0.003003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.134211" level="INFO">test add</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.134211" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.70")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.130207" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.138214" level="INFO">${label} = Thanakorn Sopapak</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.134211" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.138214" level="INFO">Thanakorn Sopapak</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.138214" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.71")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.134211" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.142218" level="INFO">${label} = Pakpoom Kittipattra</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.138214" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.142218" level="INFO">Pakpoom Kittipattra</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.142218" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.72")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.138214" elapsed="0.004004"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.146221" level="INFO">${label} = Oato</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.142218" elapsed="0.004003"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.146221" level="INFO">Oato</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.146221" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.73")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.142218" elapsed="0.004003"/>
+</iter>
+<iter>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.150225" level="INFO">${label} = Nattaporn Triemvitaya</msg>
+<var>${label}</var>
+<arg>${element}</arg>
+<arg>aria-label</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.146221" elapsed="0.004004"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-29T12:03:29.150225" level="INFO">Nattaporn Triemvitaya</msg>
+<arg>${label}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.150225" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="17f48678e62136e9868111395c9014f2", element="f.11FC1CBD2C116D9142AEDEFBE0CE8388.d.3DD17F47B614F5868E22B30F1E181EF4.e.74")&gt;</var>
+<status status="PASS" start="2025-04-29T12:03:29.146221" elapsed="0.004004"/>
+</iter>
+<var>${element}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2025-04-29T12:03:29.102182" elapsed="0.048043"/>
+</for>
+<status status="PASS" start="2025-04-29T12:03:29.097177" elapsed="0.053048"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:29.151226" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]'.</msg>
+<arg>xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.150225" elapsed="0.061058"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:39.226239" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:29.212284" elapsed="10.013955"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:03:29.212284" elapsed="10.013955"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:03:39.227241" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:03:39.227241" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:03:39.227241" elapsed="0.264976"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:40.005930" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:39.492217" elapsed="0.513713"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:03:40.005930" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.005930" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.005930" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.006931" elapsed="0.012011"/>
+</kw>
+<msg time="2025-04-29T12:03:40.018942" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.006931" elapsed="0.012011"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:40.027950" level="INFO">Element 'xpath=//*[contains(@aria-label, "confirm")]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.018942" elapsed="0.009008"/>
+</kw>
+<msg time="2025-04-29T12:03:40.027950" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.018942" elapsed="0.009008"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.028951" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.027950" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:03:40.028951" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.028951" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.028951" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:03:39.227241" elapsed="0.801710"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:03:39.227241" elapsed="0.801710"/>
+</while>
+<arg>${confirm_button}</arg>
+<status status="PASS" start="2025-04-29T12:03:39.226239" elapsed="0.802712"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:03:50.036336" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:40.029952" elapsed="10.006384"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:03:40.029952" elapsed="10.006384"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:03:50.037337" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "confirm")]'.</msg>
+<arg>${confirm_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:03:50.036336" elapsed="0.055050"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:00.102097" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:03:50.092387" elapsed="10.009710"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:03:50.091386" elapsed="10.010711"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:04:00.103098" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "close_button")]'.</msg>
+<arg>${close_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:04:00.102097" elapsed="0.046042"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:10.156482" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:00.148139" elapsed="10.008343"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:00.148139" elapsed="10.008343"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-29T12:04:10.156482" elapsed="2.138974"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:00:53.387360" elapsed="198.908096"/>
+</test>
+<test id="s1-t12" name="Leave Config 2 Approver Level and Cancel Approver Level 2" line="383">
+<kw name="Open Browser Madii" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:04:12.297457" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.madie.ai/LoginWeb'.</msg>
+<arg>${URL}</arg>
+<arg>${CHROME_BROWSER_HEADLESS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-29T12:04:12.296456" elapsed="1.694522"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-04-29T12:04:13.990978" elapsed="0.024022"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-29T12:04:14.015000" elapsed="0.016014"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:12.296456" elapsed="1.734558"/>
+</kw>
+<kw name="Login User 1" owner="action_keyword">
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:24.041254" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:14.032015" elapsed="10.009239"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:14.031014" elapsed="10.010240"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:04:24.041254" elapsed="0.013012"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${login_email_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:04:24.055267" elapsed="0.012011"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:04:24.068279" level="INFO">Sending key(s) ('parrybear83@gmail.com',) to xpath=//*[contains(@aria-label, "field_enter_email")] element.</msg>
+<msg time="2025-04-29T12:04:24.357681" level="INFO">Sending keys parrybear83@gmail.com</msg>
+<arg>${login_email_field}</arg>
+<arg>${data_email}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:04:24.068279" elapsed="0.527618"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:29.604238" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:24.595897" elapsed="5.008341"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_pass_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:04:29.604238" elapsed="0.012011"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:04:29.616249" level="INFO">Sending key(s) ('12345',) to xpath=//*[contains(@aria-label, "field_enter_password")] element.</msg>
+<msg time="2025-04-29T12:04:29.899564" level="INFO">Sending keys 12345</msg>
+<arg>${login_pass_field}</arg>
+<arg>${data_password}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:04:29.616249" elapsed="0.341367"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:34.972454" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:29.957616" elapsed="5.014838"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:04:34.972454" elapsed="0.009971"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:04:34.983426" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[@aria-label="Log in"] element.</msg>
+<msg time="2025-04-29T12:04:35.295501" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:04:35.295501" level="INFO">Releasing special key ENTER.</msg>
+<arg>${login_button}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:04:34.983426" elapsed="0.332093"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:45.330207" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:35.316520" elapsed="10.013687"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:35.315519" elapsed="10.014688"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:14.031014" elapsed="31.299193"/>
+</kw>
+<kw name="Settings Go to Leave Type" owner="action_keyword">
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:04:55.335238" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:45.331208" elapsed="10.004030"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:45.331208" elapsed="10.004030"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${settings_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:04:55.335238" elapsed="0.011010"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:04:55.346248" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[contains(@aria-label, "main_menu_Settings
+Setting")] element.</msg>
+<msg time="2025-04-29T12:04:55.644879" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:04:55.644879" level="INFO">Releasing special key ENTER.</msg>
+<arg>${settings_menu}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:04:55.346248" elapsed="0.302634"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:05.665806" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:04:55.649883" elapsed="10.015923"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:55.648882" elapsed="10.016924"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${leave_type_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:05:05.665806" elapsed="0.010009"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:05.675815" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[contains(@aria-label, "sub_menu_Settings
+Leave Type")] element.</msg>
+<msg time="2025-04-29T12:05:05.949995" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:05:05.949995" level="INFO">Releasing special key ENTER.</msg>
+<arg>${leave_type_menu}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:05:05.675815" elapsed="0.574813"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:16.258818" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:06.251629" elapsed="10.007189"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:06.250628" elapsed="10.008190"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:04:45.330207" elapsed="30.928611"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:16.259822" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "add_leave_config")]'.</msg>
+<arg>${add_leave_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:05:16.258818" elapsed="0.092086"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:26.355434" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:16.350904" elapsed="10.004530"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:16.350904" elapsed="10.004530"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${leave_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:05:26.355434" elapsed="0.012011"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:26.368445" level="INFO">Sending key(s) ('การลาเข้ารับการตรวจคัดเลือก 2 Approve_20250429113225',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:05:26.694984" level="INFO">Sending keys การลาเข้ารับการตรวจคัดเลือก 2 Approve_20250429113225</msg>
+<arg>${leave_field}</arg>
+<arg>การลาเข้ารับการตรวจคัดเลือก 2 Approve_${now}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:05:26.368445" elapsed="0.972125"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:37.342255" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:27.340570" elapsed="10.001685"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:27.340570" elapsed="10.001685"/>
+</kw>
+<kw name="Clear Input Field With Backspace" owner="action_keyword">
+<kw name="Set Focus To Element" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:05:37.343256" elapsed="0.009008"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:05:37.353265" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:05:37.353265" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:05:37.353265" elapsed="0.270225"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:38.138089" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:37.624491" elapsed="0.513598"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:05:38.138089" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.138089" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.138089" elapsed="0.001002"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.139091" elapsed="0.013011"/>
+</kw>
+<msg time="2025-04-29T12:05:38.153104" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.139091" elapsed="0.014013"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:38.160110" level="INFO">Element 'xpath=//*[contains(@aria-label, "text_field_max_days")]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.153104" elapsed="0.007006"/>
+</kw>
+<msg time="2025-04-29T12:05:38.160110" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.153104" elapsed="0.007006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.161111" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.160110" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:05:38.162112" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.161111" elapsed="0.001001"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.161111" elapsed="0.001001"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:37.353265" elapsed="0.808847"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:05:37.353265" elapsed="0.808847"/>
+</while>
+<arg>${locator}</arg>
+<status status="PASS" start="2025-04-29T12:05:37.352264" elapsed="0.809848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.162112" elapsed="0.007006"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:38.169118" level="INFO">Sending key(s) ('CTRL+A',) to xpath=//*[contains(@aria-label, "text_field_max_days")] element.</msg>
+<msg time="2025-04-29T12:05:38.454282" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-29T12:05:38.454282" level="INFO">Sending key A</msg>
+<msg time="2025-04-29T12:05:38.454282" level="INFO">Releasing special key CONTROL.</msg>
+<arg>${locator}</arg>
+<arg>CTRL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.169118" elapsed="0.292170"/>
+</kw>
+<arg>${maxday_allowed_field}</arg>
+<status status="PASS" start="2025-04-29T12:05:37.342255" elapsed="1.119033"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:38.462290" level="INFO">Sending key(s) ('10',) to xpath=//*[contains(@aria-label, "text_field_max_days")] element.</msg>
+<msg time="2025-04-29T12:05:38.759516" level="INFO">Sending keys 10</msg>
+<arg>${maxday_allowed_field}</arg>
+<arg>10</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.461288" elapsed="0.316244"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:43.781800" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:38.777532" elapsed="5.004268"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:43.782801" level="INFO">Sending key(s) ('เตรียมเอกสารการลาเข้ารับการตรวจคัดเลือก',) to xpath=//*[@aria-label="text_field_leave_description"] element.</msg>
+<msg time="2025-04-29T12:05:44.116190" level="INFO">Sending keys เตรียมเอกสารการลาเข้ารับการตรวจคัดเลือก</msg>
+<arg>${leave_description_field}</arg>
+<arg>เตรียมเอกสารการลาเข้ารับการตรวจคัดเลือก</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:05:43.781800" elapsed="0.791805"/>
+</kw>
+<kw name="TAB" owner="action_keyword">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:44.574606" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg time="2025-04-29T12:05:44.574606" level="INFO">Pressing special key TAB to browser.</msg>
+<msg time="2025-04-29T12:05:44.574606" level="INFO">Releasing special key TAB.</msg>
+<arg>NONE</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:05:44.574606" elapsed="0.013012"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:44.574606" elapsed="0.014013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:49.601966" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:44.588619" elapsed="5.013347"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:05:49.602968" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:05:49.601966" elapsed="0.001002"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:05:49.602968" elapsed="0.266980"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:50.372041" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:49.869948" elapsed="0.502093"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:05:50.372041" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.372041" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.372041" elapsed="0.000965"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.373006" elapsed="0.012010"/>
+</kw>
+<msg time="2025-04-29T12:05:50.386018" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.373006" elapsed="0.013012"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:50.393024" level="INFO">Element 'xpath=//*[contains(@aria-label, "leave_request_select_approve")][1]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.386018" elapsed="0.007006"/>
+</kw>
+<msg time="2025-04-29T12:05:50.393024" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.386018" elapsed="0.007006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.394025" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.393024" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:05:50.394025" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.394025" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.394025" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:49.602968" elapsed="0.791057"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:05:49.602968" elapsed="0.791057"/>
+</while>
+<arg>${select_approver}</arg>
+<status status="PASS" start="2025-04-29T12:05:49.601966" elapsed="0.793060"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:05:55.408274" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:50.395026" elapsed="5.013248"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:05:55.409276" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "add_approver_button")]'.</msg>
+<arg>${add_approver}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:05:55.408274" elapsed="0.066148"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:05.483706" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:05:55.475423" elapsed="10.008283"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:05:55.475423" elapsed="10.008283"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:05.483706" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "leave_request_select_approve")][1]'.</msg>
+<arg>${select_approver}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:06:05.483706" elapsed="0.110561"/>
+</kw>
+<kw name="Scroll to load element in dropdown" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:05.596268" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:05.596268" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:05.596268" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:05.595267" elapsed="0.022020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:06.620606" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:05.617287" elapsed="1.003319"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:06:05.595267" elapsed="1.025339"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:06.620606" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:06.621607" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:06.621607" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:06.620606" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:07.634026" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:06.625611" elapsed="1.008415"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:06:06.620606" elapsed="1.013420"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:07.634026" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:07.634026" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:07.634026" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:07.634026" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:08.648002" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:07.638030" elapsed="1.009972"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:06:07.634026" elapsed="1.013976"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:08.648002" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:08.649003" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:08.649003" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:08.648002" elapsed="0.005005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:09.661647" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:08.653007" elapsed="1.008640"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:06:08.648002" elapsed="1.013645"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:09.661647" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:09.662648" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:09.662648" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:09.661647" elapsed="0.006005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:10.674128" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:09.667652" elapsed="1.006476"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:06:09.661647" elapsed="1.012481"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:10.674128" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:10.675129" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:10.675129" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:10.674128" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:11.689617" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:10.678132" elapsed="1.011485"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:06:10.674128" elapsed="1.015489"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:06:05.595267" elapsed="6.094350"/>
+</for>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:11.690625" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:11.690625" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:11.690625" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:11.689617" elapsed="0.014014"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:12.716693" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:11.704631" elapsed="1.012062"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:06:11.689617" elapsed="1.027076"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:12.716693" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:12.716693" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:12.717694" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:12.716693" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:13.731942" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:12.720697" elapsed="1.011245"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:06:12.716693" elapsed="1.015249"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:13.731942" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:13.731942" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:13.731942" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:13.731942" elapsed="0.004003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:14.739566" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:13.735945" elapsed="1.003621"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:06:13.731942" elapsed="1.007624"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:14.739566" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:14.740567" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:14.740567" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:14.739566" elapsed="0.004003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:15.751970" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:14.744570" elapsed="1.007400"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:06:14.739566" elapsed="1.012404"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:15.751970" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:15.752971" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:15.752971" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:15.751970" elapsed="0.004003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:16.765526" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:15.755973" elapsed="1.009553"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:06:15.751970" elapsed="1.013556"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:16.765526" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:16.765526" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:16.765526" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:16.765526" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:17.776870" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:16.769530" elapsed="1.007340"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:06:16.765526" elapsed="1.011344"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:06:11.689617" elapsed="6.087253"/>
+</for>
+<var name="${cycle}">0</var>
+<status status="PASS" start="2025-04-29T12:06:05.595267" elapsed="12.181603"/>
+</iter>
+<var>${cycle}</var>
+<value>1</value>
+<status status="PASS" start="2025-04-29T12:06:05.595267" elapsed="12.181603"/>
+</for>
+<status status="PASS" start="2025-04-29T12:06:05.594267" elapsed="12.182603"/>
+</kw>
+<kw name="PAGE DOWN" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:17.777871" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:17.777871" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:17.777871" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:17.777871" elapsed="0.008007"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:18.290867" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:17.785878" elapsed="0.504989"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:06:17.777871" elapsed="0.512996"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:18.290867" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:18.291869" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:18.291869" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:18.290867" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:18.803636" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:18.294871" elapsed="0.508765"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:06:18.290867" elapsed="0.512769"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:18.803636" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:18.804637" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:18.804637" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:18.803636" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:19.316846" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:18.807640" elapsed="0.509206"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:06:18.803636" elapsed="0.513210"/>
+</iter>
+<var>${i}</var>
+<value>${times}</value>
+<status status="PASS" start="2025-04-29T12:06:17.777871" elapsed="1.538975"/>
+</for>
+<arg>3</arg>
+<status status="PASS" start="2025-04-29T12:06:17.777871" elapsed="1.538975"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:19.317847" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "Kanokkorn Yoosuk")]'.</msg>
+<arg>xpath=//*[contains(@aria-label, "Kanokkorn Yoosuk")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:06:19.316846" elapsed="0.041037"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:29.372632" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:19.357883" elapsed="10.014749"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:06:19.357883" elapsed="10.014749"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-29T12:06:29.373633" level="INFO">${counter} = 0</msg>
+<var>${counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-29T12:06:29.373633" elapsed="0.000000"/>
+</kw>
+<while condition="True">
+<iter>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-04-29T12:06:29.373633" elapsed="0.263607"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:30.153685" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:29.638241" elapsed="0.515444"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-04-29T12:06:30.153685" level="INFO">${counter} = 1</msg>
+<var>${counter}</var>
+<arg>${counter} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.153685" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>🔁 Scroll attempt: ${counter}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.153685" elapsed="0.001001"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.154686" elapsed="0.012011"/>
+</kw>
+<msg time="2025-04-29T12:06:30.166697" level="INFO">${is_ready} = True</msg>
+<var>${is_ready}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.154686" elapsed="0.012011"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:30.174704" level="INFO">Element 'xpath=(//*[contains(@aria-label, "leave_request_select_approve")])[2]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.166697" elapsed="0.008007"/>
+</kw>
+<msg time="2025-04-29T12:06:30.174704" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.166697" elapsed="0.008007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.174704" elapsed="0.001002"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Found ${ locator} and ready after ${counter} scrolls</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.174704" elapsed="0.001002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Exit For Loop" owner="BuiltIn">
+<msg time="2025-04-29T12:06:30.175706" level="INFO">Exiting for loop altogether.</msg>
+<doc>Stops executing the enclosing FOR loop.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.175706" elapsed="0.000000"/>
+</kw>
+<arg>${is_visible} and ${is_ready}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.175706" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:06:29.373633" elapsed="0.803073"/>
+</iter>
+<status status="PASS" start="2025-04-29T12:06:29.373633" elapsed="0.803073"/>
+</while>
+<arg>${select_approver_2}</arg>
+<status status="PASS" start="2025-04-29T12:06:29.372632" elapsed="0.804074"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:40.189172" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:30.176706" elapsed="10.012466"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:06:30.176706" elapsed="10.012466"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:40.190174" level="INFO">Clicking element 'xpath=(//*[contains(@aria-label, "leave_request_select_approve")])[2]'.</msg>
+<arg>${select_approver_2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:06:40.190174" elapsed="0.062056"/>
+</kw>
+<kw name="Scroll to load element in dropdown" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:40.254232" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:40.254232" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:40.254232" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:40.253231" elapsed="0.005005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:41.265547" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:40.258236" elapsed="1.007311"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:06:40.253231" elapsed="1.012316"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:41.265547" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:41.266548" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:41.266548" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:41.265547" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:42.280445" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:41.269551" elapsed="1.010894"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:06:41.265547" elapsed="1.014898"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:42.281447" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:42.281447" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:42.281447" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:42.280445" elapsed="0.005005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:43.292940" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:42.285450" elapsed="1.007490"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:06:42.280445" elapsed="1.012495"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:43.292940" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:43.293942" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:43.293942" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:43.292940" elapsed="0.004005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:44.310510" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:43.296945" elapsed="1.013565"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:06:43.292940" elapsed="1.017570"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:44.310510" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:44.311511" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:44.311511" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:44.310510" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:45.325252" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:44.314514" elapsed="1.010738"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:06:44.310510" elapsed="1.014742"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:45.325252" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:45.326253" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:45.326253" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:45.325252" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:46.342246" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:45.329256" elapsed="1.012990"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:06:45.325252" elapsed="1.016994"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:06:40.253231" elapsed="6.089015"/>
+</for>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:46.343248" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:46.343248" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:46.343248" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:46.342246" elapsed="0.008008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:47.359971" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:46.350254" elapsed="1.009717"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:06:46.342246" elapsed="1.017725"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:47.360972" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:47.360972" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:47.360972" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:47.359971" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:48.368569" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:47.364976" elapsed="1.003593"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:06:47.359971" elapsed="1.008598"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:48.368569" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:48.369571" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:48.369571" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:48.368569" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:49.379031" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:48.373574" elapsed="1.005457"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:06:48.368569" elapsed="1.010462"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:49.379031" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:49.379031" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:49.380031" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:49.379031" elapsed="0.004003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:50.389998" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:49.383034" elapsed="1.006964"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:06:49.379031" elapsed="1.010967"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:50.389998" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:50.391000" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:50.391000" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:50.389998" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:51.401076" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:50.395003" elapsed="1.006073"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:06:50.389998" elapsed="1.011078"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:51.401076" level="INFO">Sending key(s) ('PAGE_UP',) to page.</msg>
+<msg time="2025-04-29T12:06:51.402077" level="INFO">Pressing special key PAGE_UP to browser.</msg>
+<msg time="2025-04-29T12:06:51.402077" level="INFO">Releasing special key PAGE_UP.</msg>
+<arg>NONE</arg>
+<arg>PAGE_UP</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:51.401076" elapsed="0.004004"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:52.415051" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:51.405080" elapsed="1.009971"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:06:51.401076" elapsed="1.013975"/>
+</iter>
+<var>${i}</var>
+<value>6</value>
+<status status="PASS" start="2025-04-29T12:06:46.342246" elapsed="6.072805"/>
+</for>
+<var name="${cycle}">0</var>
+<status status="PASS" start="2025-04-29T12:06:40.253231" elapsed="12.161820"/>
+</iter>
+<var>${cycle}</var>
+<value>1</value>
+<status status="PASS" start="2025-04-29T12:06:40.253231" elapsed="12.161820"/>
+</for>
+<status status="PASS" start="2025-04-29T12:06:40.253231" elapsed="12.161820"/>
+</kw>
+<kw name="PAGE DOWN" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:52.416052" level="INFO">Sending key(s) ('PAGE_DOWN',) to page.</msg>
+<msg time="2025-04-29T12:06:52.416052" level="INFO">Pressing special key PAGE_DOWN to browser.</msg>
+<msg time="2025-04-29T12:06:52.417053" level="INFO">Releasing special key PAGE_DOWN.</msg>
+<arg>NONE</arg>
+<arg>PAGE_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:06:52.416052" elapsed="0.008007"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:06:52.930039" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:52.424059" elapsed="0.505980"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:06:52.416052" elapsed="0.513987"/>
+</iter>
+<var>${i}</var>
+<value>${times}</value>
+<status status="PASS" start="2025-04-29T12:06:52.416052" elapsed="0.513987"/>
+</for>
+<arg>1</arg>
+<status status="PASS" start="2025-04-29T12:06:52.416052" elapsed="0.513987"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:52.931040" level="INFO">Clicking element 'xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]'.</msg>
+<msg time="2025-04-29T12:06:53.194281" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-31.png"&gt;&lt;img src="selenium-screenshot-31.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-29T12:06:53.194281" level="FAIL">Element with locator 'xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]' not found.</msg>
+<arg>xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-04-29T12:06:52.930039" elapsed="0.266243">Element with locator 'xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]' not found.</status>
+</kw>
+<kw name="S" owner="action_keyword">
+<status status="NOT RUN" start="2025-04-29T12:06:53.196282" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${cancel_approver_2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-29T12:06:53.197284" elapsed="0.000000"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<status status="NOT RUN" start="2025-04-29T12:06:53.197284" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll and Wait" owner="action_keyword">
+<arg>${back2}</arg>
+<status status="NOT RUN" start="2025-04-29T12:06:53.197284" elapsed="0.000000"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<status status="NOT RUN" start="2025-04-29T12:06:53.198285" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${back2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-04-29T12:06:53.198285" elapsed="0.000000"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<status status="NOT RUN" start="2025-04-29T12:06:53.198285" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-04-29T12:06:53.198285" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-04-29T12:04:12.296456" elapsed="160.901829">Element with locator 'xpath=//*[contains(@aria-label, "Sittikorn Asavathavornvanic")]' not found.</status>
+</test>
+<test id="s1-t13" name="Edit Not fill Name leave type" line="423">
+<kw name="Open Browser Madii" owner="browser_config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:06:53.200286" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.madie.ai/LoginWeb'.</msg>
+<arg>${URL}</arg>
+<arg>${CHROME_BROWSER_HEADLESS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-29T12:06:53.200286" elapsed="1.502165"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-04-29T12:06:54.703452" elapsed="0.015013"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-29T12:06:54.718465" elapsed="0.016015"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:06:53.199286" elapsed="1.535194"/>
+</kw>
+<kw name="Login User 1" owner="action_keyword">
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:04.745128" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:06:54.735481" elapsed="10.009647"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:06:54.735481" elapsed="10.009647"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_email_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:07:04.745128" elapsed="0.014551"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${login_email_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-29T12:07:04.759679" elapsed="0.014012"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:07:04.774692" level="INFO">Sending key(s) ('parrybear83@gmail.com',) to xpath=//*[contains(@aria-label, "field_enter_email")] element.</msg>
+<msg time="2025-04-29T12:07:05.059786" level="INFO">Sending keys parrybear83@gmail.com</msg>
+<arg>${login_email_field}</arg>
+<arg>${data_email}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:07:04.774692" elapsed="0.511299"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:10.287080" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:05.286992" elapsed="5.000088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_pass_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:07:10.287080" elapsed="0.013012"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:07:10.301093" level="INFO">Sending key(s) ('12345',) to xpath=//*[contains(@aria-label, "field_enter_password")] element.</msg>
+<msg time="2025-04-29T12:07:10.582751" level="INFO">Sending keys 12345</msg>
+<arg>${login_pass_field}</arg>
+<arg>${data_password}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:07:10.301093" elapsed="0.335708"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:15.648258" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:10.637802" elapsed="5.010456"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:07:15.648258" elapsed="0.010010"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:07:15.659268" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[@aria-label="Log in"] element.</msg>
+<msg time="2025-04-29T12:07:15.974572" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:07:15.974572" level="INFO">Releasing special key ENTER.</msg>
+<arg>${login_button}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:07:15.658268" elapsed="0.332319"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:25.993249" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:15.990587" elapsed="10.002662"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:07:15.990587" elapsed="10.002662"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:06:54.734480" elapsed="31.258769"/>
+</kw>
+<kw name="Settings Go to Leave Type" owner="action_keyword">
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:36.006258" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:25.994250" elapsed="10.012008"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:07:25.994250" elapsed="10.012008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${settings_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:07:36.006258" elapsed="0.010010"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:07:36.017269" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[contains(@aria-label, "main_menu_Settings
+Setting")] element.</msg>
+<msg time="2025-04-29T12:07:36.310700" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:07:36.310700" level="INFO">Releasing special key ENTER.</msg>
+<arg>${settings_menu}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:07:36.016268" elapsed="0.298436"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:46.323430" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:36.314704" elapsed="10.008726"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:07:36.314704" elapsed="10.008726"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${leave_type_menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:07:46.323430" elapsed="0.010009"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:07:46.334440" level="INFO">Sending key(s) ('ENTER',) to xpath=//*[contains(@aria-label, "sub_menu_Settings
+Leave Type")] element.</msg>
+<msg time="2025-04-29T12:07:46.606418" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-04-29T12:07:46.606418" level="INFO">Releasing special key ENTER.</msg>
+<arg>${leave_type_menu}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:07:46.333439" elapsed="0.513197"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:07:56.862218" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:46.846636" elapsed="10.015582"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:07:46.846636" elapsed="10.015582"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:07:25.993249" elapsed="30.868969"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:08:06.868110" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:07:56.863218" elapsed="10.004892"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:07:56.862218" elapsed="10.005892"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:06.868110" level="INFO">Clicking element 'xpath=(//*[contains(@aria-label, "button_view_")])[1]'.</msg>
+<arg>${leave_config_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T12:08:06.868110" elapsed="0.071064"/>
+</kw>
+<kw name="S" owner="action_keyword">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-29T12:08:16.947945" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-29T12:08:06.940175" elapsed="10.007770"/>
+</kw>
+<status status="PASS" start="2025-04-29T12:08:06.940175" elapsed="10.007770"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${leave_field}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T12:08:16.947945" elapsed="0.011021"/>
+</kw>
+<kw name="Loop Press Backspace" owner="action_keyword">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:16.959958" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:17.247262" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:17.247262" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:16.959958" elapsed="0.292309"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-04-29T12:08:16.959958" elapsed="0.292309"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:17.253269" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:17.547816" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:17.547816" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:17.252267" elapsed="0.299553"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-04-29T12:08:17.252267" elapsed="0.299553"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:17.552821" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:17.844961" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:17.844961" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:17.552821" elapsed="0.296143"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2025-04-29T12:08:17.551820" elapsed="0.298145"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:17.849965" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:18.143599" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:18.143599" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:17.849965" elapsed="0.297638"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2025-04-29T12:08:17.849965" elapsed="0.297638"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:18.148604" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:18.423675" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:18.423675" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:18.148604" elapsed="0.279075"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2025-04-29T12:08:18.148604" elapsed="0.279075"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:18.427679" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:18.702553" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:18.702553" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:18.427679" elapsed="0.277877"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2025-04-29T12:08:18.427679" elapsed="0.277877"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:18.706557" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:18.982371" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:18.982371" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:18.705556" elapsed="0.280818"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2025-04-29T12:08:18.705556" elapsed="0.280818"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:18.986374" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:19.264524" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:19.264524" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:18.986374" elapsed="0.281153"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2025-04-29T12:08:18.986374" elapsed="0.281153"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:19.267527" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:19.545680" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:19.545680" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:19.267527" elapsed="0.281156"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2025-04-29T12:08:19.267527" elapsed="0.281156"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:19.549684" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:19.828004" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:19.828004" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:19.549684" elapsed="0.281323"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2025-04-29T12:08:19.548683" elapsed="0.282324"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:19.832008" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:20.105754" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:20.105754" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:19.832008" elapsed="0.276748"/>
+</kw>
+<var name="${i}">10</var>
+<status status="PASS" start="2025-04-29T12:08:19.831007" elapsed="0.277749"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:20.109757" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:20.388250" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:20.388250" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:20.109757" elapsed="0.282497"/>
+</kw>
+<var name="${i}">11</var>
+<status status="PASS" start="2025-04-29T12:08:20.108756" elapsed="0.283498"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:20.392254" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:20.673067" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:20.673067" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:20.392254" elapsed="0.283816"/>
+</kw>
+<var name="${i}">12</var>
+<status status="PASS" start="2025-04-29T12:08:20.392254" elapsed="0.283816"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:20.677071" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:20.955583" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:20.955583" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:20.677071" elapsed="0.281515"/>
+</kw>
+<var name="${i}">13</var>
+<status status="PASS" start="2025-04-29T12:08:20.677071" elapsed="0.281515"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:20.958586" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:21.239252" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:21.239252" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:20.958586" elapsed="0.286671"/>
+</kw>
+<var name="${i}">14</var>
+<status status="PASS" start="2025-04-29T12:08:20.958586" elapsed="0.286671"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:21.245257" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:21.520525" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:21.520525" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:21.245257" elapsed="0.278270"/>
+</kw>
+<var name="${i}">15</var>
+<status status="PASS" start="2025-04-29T12:08:21.245257" elapsed="0.278270"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:21.523527" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:21.799052" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:21.799052" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:21.523527" elapsed="0.278527"/>
+</kw>
+<var name="${i}">16</var>
+<status status="PASS" start="2025-04-29T12:08:21.523527" elapsed="0.278527"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:21.803055" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:22.079444" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-29T12:08:22.079444" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>${locator}</arg>
+<arg>BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-04-29T12:08:21.803055" elapsed="0.285397"/>
+</kw>
+<var name="${i}">17</var>
+<status status="PASS" start="2025-04-29T12:08:21.802054" elapsed="0.286398"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-04-29T12:08:22.089452" level="INFO">Sending key(s) ('BACKSPACE',) to xpath=//*[contains(@aria-label, "text_field_leave_type_name")] element.</msg>
+<msg time="2025-04-29T12:08:22.376108" level="INFO">Pressing special key BACKSPACE to element.</msg>
